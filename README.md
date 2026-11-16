@@ -1,13 +1,17 @@
-# v2rayN 规则集：绕过大陆（含开发者常用服务）
+# 代理分流规则集
 
-一份给 v2rayN 用的路由规则集，可以直接通过订阅 URL 导入。
+按客户端分文件，当前包含 v2rayN 版本。
 
 核心是「国内直连、其余走代理」，额外把几类**走代理会导致功能异常**的服务补进了直连名单。
+
+| 客户端 | 文件 |
+|---|---|
+| v2rayN | [`v4-cn-direct.json`](v4-cn-direct.json) |
 
 ## 订阅地址
 
 ```
-https://cdn.jsdelivr.net/gh/<OWNER>/<REPO>@main/v4-cn-direct.json
+https://cdn.jsdelivr.net/gh/ColorAutumn/proxy-rules@main/v4-cn-direct.json
 ```
 
 > 用 jsDelivr 而不是 raw.githubusercontent.com：后者在国内直连会超时。
