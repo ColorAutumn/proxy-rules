@@ -10,11 +10,25 @@
 
 ## 订阅地址
 
+**推荐 —— GitHub 原生地址**（需代理可达，实测 1.6s）：
+
+```
+https://raw.githubusercontent.com/ColorAutumn/proxy-rules/main/v4-cn-direct.json
+```
+
+**备用 —— jsDelivr CDN**（可直连，不依赖代理，实测 1.4s）：
+
 ```
 https://cdn.jsdelivr.net/gh/ColorAutumn/proxy-rules@main/v4-cn-direct.json
 ```
 
-> 用 jsDelivr 而不是 raw.githubusercontent.com：后者在国内直连会超时。
+两者的取舍值得了解一下：
+
+- `raw.githubusercontent.com` 国内**直连必然超时**，但走代理 1.6 秒就能拿到。
+  代理正常时用它最直接，少一层第三方依赖。
+- 但这里有个鸡生蛋问题：**如果哪天规则改错导致分流失效，raw 就拉不到了**，
+  而 jsDelivr 是直连可达的，还能把规则救回来。所以建议把 jsDelivr 那条留作兜底。
+
 > 仓库必须是**公开**的，jsDelivr 才能拉取。
 
 ## v2rayN 导入步骤
